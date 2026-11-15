@@ -1,0 +1,18 @@
+# Rubric v1: hard pass/fail checks, no partial credit. Lesson ships only if EVERY check passes.
+# type det = checked by code (free, repeatable). type llm = checked by the LLM judge.
+version: 1
+checks:
+  - {id: D1, type: det, description: "All required sections present (What, Why, How, Example, Recap headings)", fix_hint: "Use these level-2 headings: What is ...?, Why ...?, How ...?, A Simple Example, Recap."}
+  - {id: D2, type: det, description: "Length is within the word limits", fix_hint: "Adjust length to the allowed word range."}
+  - {id: D3, type: det, description: "Sentences are short: average and longest sentence within limits", fix_hint: "Split long sentences. Aim for 10-14 words per sentence."}
+  - {id: D4, type: det, description: "Every watchlist technical term is explained in plain words at first use", fix_hint: "Right where a technical term first appears, explain it in plain words: 'X is ...'."}
+  - {id: D5, type: det, description: "A worked example section with enough content exists", fix_hint: "Add a step-by-step worked example under a heading containing 'Example'."}
+  - {id: D6, type: det, description: "Recap section has enough bullet points", fix_hint: "End with a Recap section of 4-6 bullet points."}
+  - {id: L1, type: llm, description: "GROUNDED: every factual claim is supported by the fact sheet. Fail if the lesson states any technical fact that is not in, or contradicts, the fact sheet.", fix_hint: "Remove or correct claims not supported by the fact sheet."}
+  - {id: L2, type: llm, description: "ACCURATE: no factual errors or misleading statements about RAG, LLMs, embeddings or vector databases.", fix_hint: "Correct the wrong statement using the fact sheet."}
+  - {id: L3, type: llm, description: "COVERAGE: every fact marked [MUST] in the fact sheet is explained in the lesson (what RAG is, why it matters, how it works).", fix_hint: "Add the missing [MUST] facts in simple words."}
+  - {id: L4, type: llm, description: "EXAMPLE: the worked example is concrete (named person or situation, real-looking question and answer) and set in an Indian student context.", fix_hint: "Make the example concrete: a named student, a real question, a real answer."}
+  - {id: L5, type: llm, description: "LANGUAGE: simple for a non-native English reader: no idioms or slang, no hard words where a simple word works, no technical term left unexplained.", fix_hint: "Replace hard words and idioms with simple words; explain every technical term."}
+  - {id: L6, type: llm, description: "FLOW: ideas appear in a logical order; each concept is explained before it is used; no forward references.", fix_hint: "Reorder so each concept is explained before it is used."}
+  - {id: L7, type: llm, description: "ANALOGY: the analogy is accurate: it maps correctly to retrieval and generation and never suggests the model itself is retrained.", fix_hint: "Fix the analogy so it matches how RAG really works."}
+  - {id: L8, type: llm, description: "EXAMPLE GROUNDING: in the worked example, every detail in the final answer is present in the retrieved chunks shown in the example. The answer adds no facts, steps or names that the chunks do not contain.", fix_hint: "Rewrite the example answer using only the words and facts in the retrieved chunks."}

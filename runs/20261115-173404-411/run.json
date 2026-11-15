@@ -1,0 +1,197 @@
+{
+  "topic": "Introduction to RAG (Retrieval-Augmented Generation)",
+  "status": "passed",
+  "attempt": 2,
+  "best_attempt": 2,
+  "inject": "",
+  "memory_lessons": [
+    "Explain each technical term in plain words at first use.",
+    "Ensure lesson length is between 700 and 1300 words."
+  ],
+  "memory_update": {
+    "failure_counts_this_run": {
+      "D4": 1
+    },
+    "new_lessons": [],
+    "new_proposals": []
+  },
+  "usage": {
+    "llm_calls": 3,
+    "cache_hits": 0,
+    "tokens": 12922
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to rag (retrieval-augmented generation) | what is rag? | why do we need it? | how does it work? | preparation (done ahead of time) | answering (run for each user question) | analogy | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "718 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 11.4 words, longest 28 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": false,
+          "evidence": "'fine-tuning' first used in: \"Updating a knowledge base is easier than fine-tuning the whole model.\"",
+          "reason": "Technical term(s) used without a plain-words explanation: 'fine-tuning'",
+          "fix": "Explain 'fine-tuning' in plain words where it first appears (it means training a model again on new data).",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 131 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 6 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to rag (retrieval-augmented generation) | what is rag? | why do we need it? | how does it work? | preparation (done ahead of time) | answering (run for each user question) | analogy | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "708 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 11.2 words, longest 28 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": true,
+          "evidence": "all watchlist terms explained at first use",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 131 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 6 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "L1",
+          "passed": true,
+          "evidence": "An LLM is a computer program that writes text by predicting the most likely next word, using patterns it learned from a very large amount of training text.",
+          "reason": "All factual claims in the lesson are directly supported by the provided fact sheet.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L2",
+          "passed": true,
+          "evidence": "RAG does not change the model itself. It only changes the input given to the model.",
+          "reason": "The lesson contains no factual errors or misleading statements about RAG, LLMs, embeddings, or vector databases.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L3",
+          "passed": true,
+          "evidence": "Retrieval-Augmented Generation (RAG) is a method that helps a large language model (LLM) answer questions more accurately.",
+          "reason": "Every fact marked [MUST] in the fact sheet is explained in the lesson.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L4",
+          "passed": true,
+          "evidence": "Student: Ananya, a second-year computer science student. Question: “What is the deadline for submitting the semester project?”",
+          "reason": "The worked example is concrete, features a named person (Ananya) and institution (BrightFuture College), and is set in an Indian student context.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L5",
+          "passed": true,
+          "evidence": "Retrieval-Augmented Generation (RAG) is a method that helps a large language model (LLM) answer questions more accurately.",
+          "reason": "The language is simple, avoids idioms and slang, and explains all technical terms upon first use.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L6",
+          "passed": true,
+          "evidence": "RAG works in two main phases: preparation and answering.",
+          "reason": "Ideas are presented in a logical order, and concepts are explained before they are used, with no forward references.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L7",
+          "passed": true,
+          "evidence": "The student is not retrained; they only read the page that the teacher points to before answering.",
+          "reason": "The analogy accurately maps to retrieval and generation and explicitly states that the model (student) is not retrained.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L8",
+          "passed": true,
+          "evidence": "Answer: “The deadline for submitting the semester project is 15 March 2025.”",
+          "reason": "The final answer in the worked example contains only information present in the retrieved chunk, without adding new facts, steps, or names.",
+          "fix": "",
+          "source": "llm"
+        }
+      ]
+    }
+  ]
+}

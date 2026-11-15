@@ -1,0 +1,12 @@
+# Terms that must be explained in plain words the first time they appear (check D4).
+terms:
+  - {term: "RAG", plain: "stands for Retrieval-Augmented Generation: finding information first, then answering with it"}
+  - {term: "LLM", plain: "a large language model, a program that writes text"}
+  - {term: "embedding", plain: "a list of numbers that shows the meaning of a text"}
+  - {term: "vector database", plain: "a storage that quickly finds items with similar meaning"}
+  - {term: "chunk", plain: "a small piece of a document"}
+  - {term: "hallucination", plain: "a confident answer that is wrong"}
+  - {term: "prompt", plain: "the text given to an LLM"}
+  - {term: "context window", plain: "the limit on how much text an LLM can read at once"}
+  - {term: "fine-tuning", plain: "training a model again on new data"}
+  - {term: "semantic", plain: "related to meaning"}

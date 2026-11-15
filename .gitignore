@@ -1,0 +1,10 @@
+.env
+.cache/
+__pycache__/
+*.pyc
+memory.db
+memory_mock.db
+.venv/
+
+*.egg-info/
+runs/mock-*/

@@ -1,0 +1,46 @@
+[
+  {
+    "attempt": 1,
+    "failed": [
+      {
+        "check_id": "D2",
+        "reason": "Lesson has 692 words; allowed range is 700-1300.",
+        "evidence": "692 words (allowed 700-1300)"
+      },
+      {
+        "check_id": "D4",
+        "reason": "Technical term(s) used without a plain-words explanation: 'prompt'",
+        "evidence": "'prompt' first used in: \"The retrieved chunks are placed in the prompt together with the question (this is called augmentation).\""
+      },
+      {
+        "check_id": "L1",
+        "reason": "The lesson states that RAG retrains the model's weights, which contradicts F12 and F14 from the fact sheet.",
+        "evidence": "RAG works by retraining the model's weights every time a user asks a question."
+      },
+      {
+        "check_id": "L2",
+        "reason": "The statement that RAG retrains the model's weights is a factual error, as RAG only changes the input to the model, not the model itself.",
+        "evidence": "RAG works by retraining the model's weights every time a user asks a question."
+      },
+      {
+        "check_id": "L6",
+        "reason": "The lesson introduces a fundamentally incorrect concept about RAG (retraining the model) at the beginning of the 'How does it work?' section, which contradicts the core mechanism explained immediately after and disrupts the logical flow.",
+        "evidence": "RAG works by retraining the model's weights every time a user asks a question."
+      }
+    ],
+    "skipped_llm_judge": false,
+    "feedback_sent": "- [D2] Lesson has 692 words; allowed range is 700-1300.\n  Evidence: 692 words (allowed 700-1300)\n  Fix: Add about 158 words (8 below the minimum): more detail in 'How does it work?' and the example.\n- [D4] Technical term(s) used without a plain-words explanation: 'prompt'\n  Evidence: 'prompt' first used in: \"The retrieved chunks are placed in the prompt together with the question (this is called augmentation).\"\n  Fix: Explain 'prompt' in plain words where it first appears (it means the text given to an LLM).\n- [L1] The lesson states that RAG retrains the model's weights, which contradicts F12 and F14 from the fact sheet.\n  Evidence: RAG works by retraining the model's weights every time a user asks a question.\n  Fix: Remove the sentence 'RAG works by retraining the model's weights every time a user asks a question.' as it is factually incorrect and contradicts the provided fact sheet.\n- [L2] The statement that RAG retrains the model's weights is a factual error, as RAG only changes the input to the model, not the model itself.\n  Evidence: RAG works by retraining the model's weights every time a user asks a question.\n  Fix: Remove the sentence 'RAG works by retraining the model's weights every time a user asks a question.' as it is a factual error.\n- [L6] The lesson introduces a fundamentally incorrect concept about RAG (retraining the model) at the beginning of the 'How does it work?' section, which contradicts the core mechanism explained immediately after and disrupts the logical flow.\n  Evidence: RAG works by retraining the model's weights every time a user asks a question.\n  Fix: Remove the sentence 'RAG works by retraining the model's weights every time a user asks a question.' to ensure a logical flow where concepts are explained correctly and without contradiction.",
+    "changes_made": "692→825 words; 27 sentence(s) removed/replaced, 37 added/rewritten; e.g. now: \"Retrieval-Augmented Generation (RAG) is a method that gives a large language model extra information before it\" | \"RAG solves the problem by first retrieving relevant information from an external knowledge source and then giv\"",
+    "outcome_next_attempt": {
+      "resolved": [
+        "D2",
+        "D4",
+        "L1",
+        "L2",
+        "L6"
+      ],
+      "still_failing": [],
+      "not_evaluated_yet": []
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "attempt": 1,
+    "failed": [
+      {
+        "check_id": "D4",
+        "reason": "Technical term(s) used without a plain-words explanation: 'fine-tuning'",
+        "evidence": "'fine-tuning' first used in: \"Updating a knowledge base is easier than fine-tuning the whole model.\""
+      }
+    ],
+    "skipped_llm_judge": true,
+    "feedback_sent": "- [D4] Technical term(s) used without a plain-words explanation: 'fine-tuning'\n  Evidence: 'fine-tuning' first used in: \"Updating a knowledge base is easier than fine-tuning the whole model.\"\n  Fix: Explain 'fine-tuning' in plain words where it first appears (it means training a model again on new data).\n- (Quality checks by the LLM judge run only after the basic checks above pass.)",
+    "changes_made": "718→708 words; 3 sentence(s) removed/replaced, 3 added/rewritten; e.g. now: \"Updating a knowledge base is easier than fine-tuning.\" | \"Fine-tuning means training the model again on new data to change its internal knowledge.\"",
+    "outcome_next_attempt": {
+      "resolved": [
+        "D4"
+      ],
+      "still_failing": [],
+      "not_evaluated_yet": []
+    }
+  }
+]

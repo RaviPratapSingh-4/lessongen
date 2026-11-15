@@ -1,0 +1,30 @@
+# All tunables live here. Change model IDs to match what your Groq console lists.
+providers:
+  groq:   {base_url: "https://api.groq.com/openai/v1", api_key_env: GROQ_API_KEY}
+  gemini: {base_url: "https://generativelanguage.googleapis.com/v1beta/openai/", api_key_env: GEMINI_API_KEY}
+
+models:                    # judge is a different provider AND model family from the generator
+  generator: {provider: groq,   name: openai/gpt-oss-120b}
+  judge:     {provider: gemini, name: gemini-2.5-flash}   # replace with an ID from your Gemini model list
+  reflector: {provider: groq,   name: openai/gpt-oss-20b}
+
+temperature: {generator: 0.6, judge: 0.0, reflector: 0.2}
+max_tokens: {generator: 4000, judge: 6000, reflector: 1500}
+reasoning_effort: low     # only applied to openai/gpt-oss models
+
+max_retries: 2             # retries after the first attempt -> at most 3 attempts
+lesson_threshold: 2        # a check must fail this many times (across attempts/runs) before a lesson is learned
+
+limits:                    # deterministic rubric thresholds
+  min_words: 700
+  max_words: 1300
+  max_avg_sentence_words: 17
+  max_sentence_words: 32
+  min_example_words: 40
+  min_recap_bullets: 3
+
+paths:
+  runs_dir: runs
+  cache_dir: .cache
+  db: memory.db
+  db_mock: memory_mock.db

@@ -1,0 +1,186 @@
+{
+  "topic": "Introduction to RAG (Retrieval-Augmented Generation)",
+  "status": "passed",
+  "attempt": 2,
+  "best_attempt": 2,
+  "inject": "",
+  "memory_lessons": [],
+  "memory_update": {
+    "failure_counts_this_run": {
+      "D4": 1
+    },
+    "new_lessons": [],
+    "new_proposals": []
+  },
+  "usage": {
+    "llm_calls": 3,
+    "cache_hits": 0,
+    "tokens": 13999
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to rag (retrieval‑augmented generation) | what is rag? | why do we need it? | how does it work? | 1. preparation (done ahead of time) | 2. answering (run for each user question) | a simple example | analogy: open‑book exam | worked example in an indian college | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "834 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 12.6 words, longest 29 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": false,
+          "evidence": "'prompt' first used in: \"The retrieved text is augmented to the LLM’s prompt, so the model can use up‑to‑date or private information w…\"",
+          "reason": "Technical term(s) used without a plain-words explanation: 'prompt'",
+          "fix": "Explain 'prompt' in plain words where it first appears (it means the text given to an LLM).",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 232 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 6 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to rag (retrieval‑augmented generation) | what is rag? | why do we need it? | how does it work? | 1. preparation (done ahead of time) | 2. answering (run for each user question) | a simple example | analogy: open‑book exam | worked example in an indian college | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "848 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 12.7 words, longest 29 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": true,
+          "evidence": "all watchlist terms explained at first use",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 232 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 6 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "L1",
+          "passed": true,
+          "evidence": "An LLM is a computer program that writes text by predicting the most likely next word. It learns this ability from a huge amount of training text.",
+          "reason": "All factual claims in the lesson are directly supported by the provided fact sheet, with no contradictions.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L2",
+          "passed": true,
+          "evidence": "RAG does not change the LLM itself; it only changes the input given to the model.",
+          "reason": "The lesson contains no factual errors or misleading statements regarding RAG, LLMs, embeddings, or vector databases.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L3",
+          "passed": true,
+          "evidence": "RAG stands for Retrieval‑Augmented Generation. It helps a large language model (LLM) answer questions more accurately.",
+          "reason": "Every fact marked [MUST] in the fact sheet is clearly explained within the lesson, covering what RAG is, why it matters, and how it works.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L4",
+          "passed": true,
+          "evidence": "Riya is studying Computer Science at Delhi University. She wants to know: “What are the steps to submit a project on the university’s online portal?”",
+          "reason": "The worked example features a named person (Riya), a specific Indian university (Delhi University), a realistic question, and a plausible answer, fulfilling all criteria.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L5",
+          "passed": true,
+          "evidence": "The LLM can only read a limited amount of text at once. This limit is called the context window.",
+          "reason": "The language used is simple, avoids idioms and slang, and all technical terms are either immediately explained or clearly understood from context.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L6",
+          "passed": true,
+          "evidence": "RAG has two main phases: Preparation and Answering.",
+          "reason": "The lesson presents ideas in a logical sequence, explaining each concept before its use, and contains no forward references.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L7",
+          "passed": true,
+          "evidence": "The textbook is the external knowledge source, and the act of looking up the right page is the retrieval step. The student then writes the answer using the found text.",
+          "reason": "The analogy accurately maps to retrieval and generation, and explicitly states the student is 'looking up' information rather than 'memorising', correctly implying the model is not retrained.",
+          "fix": "",
+          "source": "llm"
+        }
+      ]
+    }
+  ]
+}

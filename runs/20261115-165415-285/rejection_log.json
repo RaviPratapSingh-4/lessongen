@@ -1,0 +1,22 @@
+[
+  {
+    "attempt": 1,
+    "failed": [
+      {
+        "check_id": "D4",
+        "reason": "Technical term(s) used without a plain-words explanation: 'prompt'",
+        "evidence": "'prompt' first used in: \"The retrieved text is augmented to the LLM’s prompt, so the model can use up‑to‑date or private information w…\""
+      }
+    ],
+    "skipped_llm_judge": true,
+    "feedback_sent": "- [D4] Technical term(s) used without a plain-words explanation: 'prompt'\n  Evidence: 'prompt' first used in: \"The retrieved text is augmented to the LLM’s prompt, so the model can use up‑to‑date or private information w…\"\n  Fix: Explain 'prompt' in plain words where it first appears (it means the text given to an LLM).\n- (Quality checks by the LLM judge run only after the basic checks above pass.)",
+    "changes_made": "834→848 words; 3 sentence(s) removed/replaced, 4 added/rewritten; e.g. now: \"It helps a large language model (LLM) answer questions more accurately.\" | \"The retrieved text is augmented to the LLM’s prompt (the prompt is the text given to the LLM).\"",
+    "outcome_next_attempt": {
+      "resolved": [
+        "D4"
+      ],
+      "still_failing": [],
+      "not_evaluated_yet": []
+    }
+  }
+]

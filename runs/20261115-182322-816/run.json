@@ -1,0 +1,260 @@
+{
+  "topic": "Introduction to RAG (Retrieval-Augmented Generation)",
+  "status": "passed",
+  "attempt": 2,
+  "best_attempt": 2,
+  "inject": "false_claim",
+  "memory_lessons": [
+    "Rewrite examples using only words and facts from retrieved chunks; avoid adding new details or names not present in the source.",
+    "Explain each technical term in plain words at first use.",
+    "Ensure lesson length is between 700 and 1300 words."
+  ],
+  "memory_update": {
+    "failure_counts_this_run": {},
+    "new_lessons": [],
+    "new_proposals": []
+  },
+  "usage": {
+    "llm_calls": 4,
+    "cache_hits": 0,
+    "tokens": 18507
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "injected": "false_claim",
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to **retrieval-augmented generation** | what is retrieval-augmented generation? | why do we need it? | how does it work? | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": false,
+          "evidence": "692 words (allowed 700-1300)",
+          "reason": "Lesson has 692 words; allowed range is 700-1300.",
+          "fix": "Add about 158 words (8 below the minimum): more detail in 'How does it work?' and the example.",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 12.6 words, longest 31 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": false,
+          "evidence": "'prompt' first used in: \"The retrieved chunks are placed in the prompt together with the question (this is called augmentation).\"",
+          "reason": "Technical term(s) used without a plain-words explanation: 'prompt'",
+          "fix": "Explain 'prompt' in plain words where it first appears (it means the text given to an LLM).",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 157 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 5 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "L1",
+          "passed": false,
+          "evidence": "RAG works by retraining the model's weights every time a user asks a question.",
+          "reason": "The lesson states that RAG retrains the model's weights, which contradicts F12 and F14 from the fact sheet.",
+          "fix": "Remove the sentence 'RAG works by retraining the model's weights every time a user asks a question.' as it is factually incorrect and contradicts the provided fact sheet.",
+          "source": "llm"
+        },
+        {
+          "check_id": "L2",
+          "passed": false,
+          "evidence": "RAG works by retraining the model's weights every time a user asks a question.",
+          "reason": "The statement that RAG retrains the model's weights is a factual error, as RAG only changes the input to the model, not the model itself.",
+          "fix": "Remove the sentence 'RAG works by retraining the model's weights every time a user asks a question.' as it is a factual error.",
+          "source": "llm"
+        },
+        {
+          "check_id": "L3",
+          "passed": true,
+          "evidence": "An LLM (large language model) is a computer program that writes text by predicting the most likely next word, using patterns it learned from a very large amount of training text. The LLM’s knowledge is frozen at training time. It does not know about newer events or about private documents it never saw. Because it cannot see new data, the LLM can give confident but wrong answers. This problem is called hallucination. RAG solves this by retrieving relevant information from an external knowledge source and giving that information to the LLM together with the user’s question. RAG lets an LLM use up-to-date or private information without retraining the model. By providing the LLM with actual source text, RAG can reduce hallucination because the answer can be checked against the supplied documents. It does not remove hallucination completely, but it makes errors easier to spot. Preparation step (done ahead of time): Documents are split into small pieces called chunks. Each chunk is converted into an embedding, a list of numbers that represents its meaning. Texts with similar meaning get similar numbers. Answering step: The user’s question is converted into an embedding with the same method, and the most similar chunks are found. This is called retrieval. The retrieved chunks are placed in the prompt together with the question (this is called augmentation). The LLM then writes the answer (this is called generation).",
+          "reason": "All facts marked [MUST] in the fact sheet (F1, F2, F3, F4, F5, F6, F7, F8, F10, F11) are explained in the lesson.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L4",
+          "passed": true,
+          "evidence": "Imagine College of Bright Futures. A student named Anita asks a help-bot: Question: “What is the deadline for submitting the final project in the Data Science course?” Answer: “The final project must be submitted by 30 April.”",
+          "reason": "The example is concrete with a named person (Anita) and situation (College of Bright Futures, Data Science course deadline), and is set in an Indian student context.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L5",
+          "passed": true,
+          "evidence": "Retrieval-Augmented Generation, abbreviated RAG, is a method that adds external information to a large language model before it answers a question. An LLM (large language model) is a computer program that writes text by predicting the most likely next word, using patterns it learned from a very large amount of training text.",
+          "reason": "The language is simple, avoids idioms and slang, and explains technical terms like LLM, RAG, hallucination, chunks, embedding, vector database, retrieval, augmentation, generation, and context window.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L6",
+          "passed": false,
+          "evidence": "RAG works by retraining the model's weights every time a user asks a question.",
+          "reason": "The lesson introduces a fundamentally incorrect concept about RAG (retraining the model) at the beginning of the 'How does it work?' section, which contradicts the core mechanism explained immediately after and disrupts the logical flow.",
+          "fix": "Remove the sentence 'RAG works by retraining the model's weights every time a user asks a question.' to ensure a logical flow where concepts are explained correctly and without contradiction.",
+          "source": "llm"
+        },
+        {
+          "check_id": "L7",
+          "passed": true,
+          "evidence": "Think of RAG like an open-book exam. The student = the LLM, the book = the documents, finding the right page = retrieval, writing the answer = generation. The student is not retrained; they simply read the right page before answering.",
+          "reason": "The analogy accurately maps student to LLM, book to documents, finding page to retrieval, and writing answer to generation, and explicitly states the model is not retrained.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L8",
+          "passed": true,
+          "evidence": "Retrieved text: “Data Science course – final project submission deadline 30 April.” Answer: “The final project must be submitted by 30 April.”",
+          "reason": "The final answer in the example ('The final project must be submitted by 30 April.') is fully derived from the retrieved chunk ('Data Science course – final project submission deadline 30 April.') and adds no new facts or details.",
+          "fix": "",
+          "source": "llm"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to **retrieval-augmented generation** | what is retrieval-augmented generation? | why do we need it? | how does it work? | preparation (done ahead of time) | answering (done for each user question) | a simple example | more detail on each step | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "825 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 12.7 words, longest 31 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": true,
+          "evidence": "all watchlist terms explained at first use",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 162 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 5 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "L1",
+          "passed": true,
+          "evidence": "An LLM (large language model) is a computer program that writes text by predicting the most likely next word, using patterns it learned from a very large amount of training text.",
+          "reason": "All factual claims in the lesson are directly supported by the provided fact sheet, with no contradictions or ungrounded technical statements.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L2",
+          "passed": true,
+          "evidence": "RAG lets an LLM use up-to-date or private information without retraining the model. By providing the LLM with actual source text, RAG can reduce hallucination because the answer can be checked against the supplied documents.",
+          "reason": "The lesson contains no factual errors or misleading statements regarding RAG, LLMs, embeddings, or vector databases, aligning with the fact sheet.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L3",
+          "passed": true,
+          "evidence": "RAG solves the problem by first retrieving relevant information from an external knowledge source and then giving that information to the LLM together with the user’s question.",
+          "reason": "Every fact marked [MUST] in the fact sheet, including what RAG is, why it matters, and how it works, is clearly explained in the lesson.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L4",
+          "passed": true,
+          "evidence": "Imagine FutureTech College. A student named Ravi asks a help-bot: Question: “When does the semester-end exam start for the Mathematics 101 course?”",
+          "reason": "The worked example is concrete with a named person (Ravi) and situation (FutureTech College), a real-looking question and answer, and is set in an Indian student context.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L5",
+          "passed": true,
+          "evidence": "An LLM (large language model) is a computer program that writes text by predicting the most likely next word, using patterns it learned from a very large amount of training text.",
+          "reason": "The language used is simple, avoids idioms or slang, and explains all technical terms before or immediately after their first use, making it accessible for non-native English readers.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L6",
+          "passed": true,
+          "evidence": "RAG has two main phases: preparation and answering. Preparation (done ahead of time) 1. Chunking – Documents are split into small pieces called chunks.",
+          "reason": "The lesson presents ideas in a logical order, explaining each concept before it is used, and contains no forward references.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L7",
+          "passed": true,
+          "evidence": "Think of RAG like an open-book exam. The student = the LLM, the book = the documents, finding the right page = retrieval, writing the answer = generation. The student is not retrained; they simply read the right page before answering.",
+          "reason": "The analogy accurately maps to retrieval and generation and explicitly states that the model itself is not retrained, aligning with the core concept of RAG.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L8",
+          "passed": true,
+          "evidence": "Retrieved text: “Mathematics 101 – semester-end exam starts on 20 May and ends on 22 May.” Answer: “The semester-end exam for Mathematics 101 starts on 20 May.”",
+          "reason": "Every detail in the final answer of the worked example is directly present in the retrieved chunk, with no additional facts, steps, or names introduced.",
+          "fix": "",
+          "source": "llm"
+        }
+      ]
+    }
+  ]
+}

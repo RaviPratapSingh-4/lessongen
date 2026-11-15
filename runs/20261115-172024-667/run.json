@@ -1,0 +1,259 @@
+{
+  "topic": "Introduction to RAG (Retrieval-Augmented Generation)",
+  "status": "needs_human_review",
+  "attempt": 3,
+  "best_attempt": 3,
+  "inject": "",
+  "memory_lessons": [],
+  "memory_update": {
+    "failure_counts_this_run": {
+      "D2": 2,
+      "D4": 1,
+      "L7": 1
+    },
+    "new_lessons": [
+      {
+        "check_id": "D2",
+        "text": "Ensure lesson length is between 700 and 1300 words."
+      },
+      {
+        "check_id": "D4",
+        "text": "Explain each technical term in plain words at first use."
+      }
+    ],
+    "new_proposals": []
+  },
+  "usage": {
+    "llm_calls": 5,
+    "cache_hits": 0,
+    "tokens": 16375
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to rag (retrieval-augmented generation) | what is rag? | why do we need it? | how does it work? | preparation (done ahead of time) | answering (run for each user question) | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": false,
+          "evidence": "672 words (allowed 700-1300)",
+          "reason": "Lesson has 672 words; allowed range is 700-1300.",
+          "fix": "Add content to reach 700-1300 words.",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 9.7 words, longest 19 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": false,
+          "evidence": "'context window' first used in: \"The LLM’s *context window* limits how much text it can read at one time.\"; 'fine-tuning' first used in: \"RAG is different from fine-tuning.\"",
+          "reason": "Technical term(s) used without a plain-words explanation: 'context window', 'fine-tuning'",
+          "fix": "Explain 'context window' in plain words where it first appears (it means the limit on how much text an LLM can read at once). Explain 'fine-tuning' in plain words where it first appears (it means training a model again on new data).",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 158 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 6 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to rag (retrieval-augmented generation) | what is rag? | why do we need it? | how does it work? | preparation (done ahead of time) | answering (run for each user question) | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": false,
+          "evidence": "697 words (allowed 700-1300)",
+          "reason": "Lesson has 697 words; allowed range is 700-1300.",
+          "fix": "Add content to reach 700-1300 words.",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 10.0 words, longest 20 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": true,
+          "evidence": "all watchlist terms explained at first use",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 158 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 7 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to rag (retrieval-augmented generation) | what is rag? | why do we need it? | how does it work? | preparation (done ahead of time) | answering (run for each user question) | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "732 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 10.2 words, longest 20 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": true,
+          "evidence": "all watchlist terms explained at first use",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 158 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 7 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "L1",
+          "passed": true,
+          "evidence": "An LLM is a computer program that writes text by predicting the most likely next word. It learns this ability from a very large amount of training text.",
+          "reason": "All factual claims in the lesson are directly supported by the provided fact sheet, including definitions of LLM, RAG, hallucination, and the steps of RAG.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L2",
+          "passed": true,
+          "evidence": "RAG lets the LLM use fresh or secret information without retraining the model. By answering from supplied text, RAG can reduce hallucination.",
+          "reason": "The lesson accurately describes RAG, LLMs, embeddings, and vector databases without any factual errors or misleading statements, aligning with the fact sheet.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L3",
+          "passed": true,
+          "evidence": "RAG stands for Retrieval-Augmented Generation. ... RAG solves this by first retrieving relevant information from an external source. ... All documents are split into small pieces called chunks. Each chunk is turned into an embedding.",
+          "reason": "Every fact marked [MUST] in the fact sheet, covering what RAG is, why it matters, and how it works, is explained in the lesson.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L4",
+          "passed": true,
+          "evidence": "Student: Ananya Patel, a second-year computer science student. Question: “What is the deadline to submit the final project for the Data Mining course?”",
+          "reason": "The worked example features a named student (Ananya Patel) and a specific college (BrightFuture College), with a realistic question and answer, set in an Indian student context.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L5",
+          "passed": true,
+          "evidence": "An LLM is a computer program that writes text by predicting the most likely next word. It learns this ability from a very large amount of training text.",
+          "reason": "The language used is simple, avoids idioms or slang, uses straightforward vocabulary, and explains all technical terms upon their introduction.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L6",
+          "passed": true,
+          "evidence": "An LLM is a computer program that writes text by predicting the most likely next word. It learns this ability from a very large amount of training text. ... RAG solves this by first retrieving relevant information from an external source.",
+          "reason": "Ideas are presented in a logical sequence, with concepts like LLM and hallucination explained before RAG is introduced, and RAG's steps explained before the example.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L7",
+          "passed": false,
+          "evidence": "MISSING: The lesson does not contain an analogy.",
+          "reason": "The lesson does not use an analogy; it provides a concrete example instead. Therefore, the check for an accurate analogy cannot be passed.",
+          "fix": "Add an analogy that accurately maps to retrieval and generation without suggesting model retraining, or remove the check if analogies are not required.",
+          "source": "llm"
+        },
+        {
+          "check_id": "L8",
+          "passed": true,
+          "evidence": "Retrieved text: Data Mining – Project guidelines. The final project must be submitted by 15 March 2025. Final answer: “The deadline to submit the final project for the Data Mining course is 15 March 2025.”",
+          "reason": "The final answer in the worked example is a direct extraction from the retrieved chunk, adding no new facts, steps, or names not present in the provided source.",
+          "fix": "",
+          "source": "llm"
+        }
+      ]
+    }
+  ]
+}

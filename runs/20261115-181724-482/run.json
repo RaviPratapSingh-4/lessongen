@@ -1,0 +1,321 @@
+{
+  "topic": "Introduction to RAG (Retrieval-Augmented Generation)",
+  "status": "needs_human_review",
+  "attempt": 3,
+  "best_attempt": 3,
+  "inject": "false_claim",
+  "memory_lessons": [
+    "Explain each technical term in plain words at first use.",
+    "Ensure lesson length is between 700 and 1300 words."
+  ],
+  "memory_update": {
+    "failure_counts_this_run": {
+      "L5": 1,
+      "L8": 2
+    },
+    "new_lessons": [
+      {
+        "check_id": "L8",
+        "text": "Rewrite examples using only words and facts from retrieved chunks; avoid adding new details or names not present in the source."
+      }
+    ],
+    "new_proposals": []
+  },
+  "usage": {
+    "llm_calls": 6,
+    "cache_hits": 0,
+    "tokens": 23291
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "injected": "false_claim",
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to **rag** ( retrieval-augmented generation ) | what is rag? | why do we need it? | how does it work? | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "747 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 9.6 words, longest 18 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": false,
+          "evidence": "'vector database' first used in: \"All embeddings are stored in a vector database.\"; 'prompt' first used in: \"The retrieved chunks are added to the prompt together with the question.\"",
+          "reason": "Technical term(s) used without a plain-words explanation: 'vector database', 'prompt'",
+          "fix": "Explain 'vector database' in plain words where it first appears (it means a storage that quickly finds items with similar meaning). Explain 'prompt' in plain words where it first appears (it means the text given to an LLM).",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 180 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 6 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to **rag** ( retrieval-augmented generation ) | what is **rag** ? | why do we need it ? | how does it work ? | preparation (done ahead of time) | answering (done when a user asks a question) | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "708 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 9.8 words, longest 25 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": true,
+          "evidence": "all watchlist terms explained at first use",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 181 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 6 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "L1",
+          "passed": true,
+          "evidence": "RAG stands for Retrieval-Augmented Generation. It is a method that helps a large language model (LLM) give better answers.",
+          "reason": "All factual claims in the lesson are directly supported by the provided fact sheet.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L2",
+          "passed": true,
+          "evidence": "RAG lets the LLM use up-to-date or private information without retraining the model. RAG only changes the input that the LLM receives, not the model itself.",
+          "reason": "The lesson contains no factual errors or misleading statements about RAG, LLMs, embeddings, or vector databases.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L3",
+          "passed": true,
+          "evidence": "RAG stands for Retrieval-Augmented Generation. ... RAG lets the LLM use up-to-date or private information without retraining the model. ... RAG has two main phases: preparation and answering.",
+          "reason": "Every fact marked [MUST] in the fact sheet (F1-F8, F10-F11) is explained in the lesson.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L4",
+          "passed": true,
+          "evidence": "Imagine BrightFuture College has a digital handbook called StudentGuide. A student named Anita asks the system: Question: “What is the deadline to submit the final project for the Data Science course?”",
+          "reason": "The worked example is concrete with named entities ('BrightFuture College', 'Anita'), features a real-looking question and answer, and is set in a plausible Indian student context.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L5",
+          "passed": false,
+          "evidence": "Late submissions incur a penalty.",
+          "reason": "The word 'incur' is a slightly more formal and less common word than simpler alternatives like 'get' or 'face', which could be challenging for a non-native English reader.",
+          "fix": "Replace 'incur a penalty' with a simpler phrase like 'will get a penalty' or 'face a penalty'.",
+          "source": "llm"
+        },
+        {
+          "check_id": "L6",
+          "passed": true,
+          "evidence": "What is RAG ? ... Why do we need it ? ... How does it work ? ... A Simple Example ... Recap",
+          "reason": "Ideas are presented in a logical order, with concepts explained before their use, and no forward references.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L7",
+          "passed": true,
+          "evidence": "Think of RAG like an open-book exam. The student is the LLM. The book is the collection of documents. Finding the right page is retrieval. Writing the answer is generation. The student is not retrained; they only use the book during the exam.",
+          "reason": "The analogy accurately maps to retrieval and generation and explicitly states that the model (student) is not retrained.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L8",
+          "passed": false,
+          "evidence": "Answer: “The deadline to submit the final project for the Data Science course is 15 September.” ... Chunk 1: “Data Science – Project Guidelines. The final project must be submitted by 15 September.” ... Chunk 2: “Course Calendar. ... Final project deadline on 15 September.”",
+          "reason": "Unverified pass: the judge's evidence quote was not found in the lesson.",
+          "fix": "Rewrite the example answer using only the words and facts in the retrieved chunks.",
+          "source": "llm"
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "injected": null,
+      "verdicts": [
+        {
+          "check_id": "D1",
+          "passed": true,
+          "evidence": "headings found: introduction to **rag** ( retrieval-augmented generation ) | what is **rag** ? | why do we need it ? | how does it work ? | preparation (done ahead of time) | answering (done when a user asks a question) | a simple example | recap",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D2",
+          "passed": true,
+          "evidence": "709 words (allowed 700-1300)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D3",
+          "passed": true,
+          "evidence": "avg 9.8 words, longest 25 words",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D4",
+          "passed": true,
+          "evidence": "all watchlist terms explained at first use",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D5",
+          "passed": true,
+          "evidence": "example section has 182 words (min 40)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "D6",
+          "passed": true,
+          "evidence": "recap has 6 bullet points (min 3)",
+          "reason": "",
+          "fix": "",
+          "source": "det"
+        },
+        {
+          "check_id": "L1",
+          "passed": true,
+          "evidence": "An LLM is a computer program that writes text by predicting the most likely next word. It learns this ability from a huge amount of training text.",
+          "reason": "All factual claims in the lesson are directly supported by the provided fact sheet, with no contradictions or ungrounded technical statements.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L2",
+          "passed": true,
+          "evidence": "RAG stands for Retrieval-Augmented Generation. It is a method that helps a large language model (LLM) give better answers.",
+          "reason": "The lesson contains no factual errors or misleading statements regarding RAG, LLMs, embeddings, or vector databases, aligning with the fact sheet.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L3",
+          "passed": true,
+          "evidence": "RAG stands for Retrieval-Augmented Generation. ... RAG lets the LLM use up-to-date or private information without retraining the model. ... All documents are split into small pieces called chunks.",
+          "reason": "Every fact marked [MUST] in the fact sheet is explained in the lesson, covering what RAG is, why it matters, and how it works.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L4",
+          "passed": true,
+          "evidence": "Imagine BrightFuture College has a digital handbook called StudentGuide. A student named Anita asks the system: Question: “What is the deadline to submit the final project for the Data Science course?”",
+          "reason": "The worked example is concrete with named entities ('BrightFuture College', 'Anita') and a real-looking question and answer, set in a plausible Indian student context.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L5",
+          "passed": true,
+          "evidence": "An LLM is a computer program that writes text by predicting the most likely next word. It learns this ability from a huge amount of training text.",
+          "reason": "The language used is simple and direct, avoiding idioms or slang. All technical terms are clearly explained upon their introduction.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L6",
+          "passed": true,
+          "evidence": "What is RAG? ... Why do we need it? ... How does it work? ... A Simple Example.",
+          "reason": "The ideas are presented in a logical sequence, with each concept explained before it is used, and no forward references are present.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L7",
+          "passed": true,
+          "evidence": "Think of RAG like an open-book exam. The student is the LLM. The book is the collection of documents. Finding the right page is retrieval. Writing the answer is generation. The student is not retrained; they only use the book during the exam.",
+          "reason": "The analogy accurately maps the student to the LLM, the book to documents, finding pages to retrieval, and writing to generation, explicitly stating that the student (LLM) is not retrained.",
+          "fix": "",
+          "source": "llm"
+        },
+        {
+          "check_id": "L8",
+          "passed": false,
+          "evidence": "Answer: “The deadline to submit the final project for the Data Science course is 15 September.” ... Chunk 1: “Data Science – Project Guidelines. The final project must be submitted by 15 September.”",
+          "reason": "Unverified pass: the judge's evidence quote was not found in the lesson.",
+          "fix": "Rewrite the example answer using only the words and facts in the retrieved chunks.",
+          "source": "llm"
+        }
+      ]
+    }
+  ]
+}

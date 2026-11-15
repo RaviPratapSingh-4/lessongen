@@ -1,0 +1,6 @@
+openai>=1.40
+langgraph>=0.2
+pydantic>=2
+pyyaml
+python-dotenv
+pytest

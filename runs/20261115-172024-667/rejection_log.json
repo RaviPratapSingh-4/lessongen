@@ -1,0 +1,63 @@
+[
+  {
+    "attempt": 1,
+    "failed": [
+      {
+        "check_id": "D2",
+        "reason": "Lesson has 672 words; allowed range is 700-1300.",
+        "evidence": "672 words (allowed 700-1300)"
+      },
+      {
+        "check_id": "D4",
+        "reason": "Technical term(s) used without a plain-words explanation: 'context window', 'fine-tuning'",
+        "evidence": "'context window' first used in: \"The LLM’s *context window* limits how much text it can read at one time.\"; 'fine-tuning' first used in: \"RAG is different from fine-tuning.\""
+      }
+    ],
+    "skipped_llm_judge": true,
+    "feedback_sent": "- [D2] Lesson has 672 words; allowed range is 700-1300.\n  Evidence: 672 words (allowed 700-1300)\n  Fix: Add content to reach 700-1300 words.\n- [D4] Technical term(s) used without a plain-words explanation: 'context window', 'fine-tuning'\n  Evidence: 'context window' first used in: \"The LLM’s *context window* limits how much text it can read at one time.\"; 'fine-tuning' first used in: \"RAG is different from fine-tuning.\"\n  Fix: Explain 'context window' in plain words where it first appears (it means the limit on how much text an LLM can read at once). Explain 'fine-tuning' in plain words where it first appears (it means training a model again on new data).\n- (Quality checks by the LLM judge run only after the basic checks above pass.)",
+    "changes_made": "672→697 words; 7 sentence(s) removed/replaced, 8 added/rewritten; e.g. now: \"The LLM’s context window means the limit on how much text the model can read at once.\" | \"Because of this limit, only a few relevant chunks are added instead of all documents.\"",
+    "outcome_next_attempt": {
+      "resolved": [
+        "D4"
+      ],
+      "still_failing": [
+        "D2"
+      ],
+      "not_evaluated_yet": []
+    }
+  },
+  {
+    "attempt": 2,
+    "failed": [
+      {
+        "check_id": "D2",
+        "reason": "Lesson has 697 words; allowed range is 700-1300.",
+        "evidence": "697 words (allowed 700-1300)"
+      }
+    ],
+    "skipped_llm_judge": true,
+    "feedback_sent": "- [D2] Lesson has 697 words; allowed range is 700-1300.\n  Evidence: 697 words (allowed 700-1300)\n  Fix: Add content to reach 700-1300 words.\n- (Quality checks by the LLM judge run only after the basic checks above pass.)",
+    "changes_made": "697→732 words; 0 sentence(s) removed/replaced, 2 added/rewritten; e.g. now: \"RAG is useful when a company has many policy PDFs, or a school has many lecture notes.\" | \"Instead of rebuilding a new LLM each year, the same model can read the newest files through RAG.\"",
+    "outcome_next_attempt": {
+      "resolved": [
+        "D2"
+      ],
+      "still_failing": [],
+      "not_evaluated_yet": []
+    }
+  },
+  {
+    "attempt": 3,
+    "failed": [
+      {
+        "check_id": "L7",
+        "reason": "The lesson does not use an analogy; it provides a concrete example instead. Therefore, the check for an accurate analogy cannot be passed.",
+        "evidence": "MISSING: The lesson does not contain an analogy."
+      }
+    ],
+    "skipped_llm_judge": false,
+    "feedback_sent": "- [L7] The lesson does not use an analogy; it provides a concrete example instead. Therefore, the check for an accurate analogy cannot be passed.\n  Evidence: MISSING: The lesson does not contain an analogy.\n  Fix: Add an analogy that accurately maps to retrieval and generation without suggesting model retraining, or remove the check if analogies are not required.",
+    "changes_made": "",
+    "outcome_next_attempt": {}
+  }
+]

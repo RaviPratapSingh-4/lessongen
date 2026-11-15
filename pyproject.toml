@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lessongen"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["openai>=1.40", "langgraph>=0.2", "pydantic>=2", "pyyaml", "python-dotenv"]
+
+[project.scripts]
+lessongen = "lessongen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
